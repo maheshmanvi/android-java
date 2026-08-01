@@ -11,59 +11,72 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Live Data Example"
         android:textAlignment="center"
         android:textColor="#24317E"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/liveTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/liveTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Live Data"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#8BC34A"
-        android:textSize="24sp"
-
-        android:typeface="sans"
+    <ScrollView
+        android:id="@+id/scrolltext"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+
+        >
+
+        <TextView
+            android:id="@+id/liveTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="?attr/colorOnPrimarySurface"
+            android:scrollbars="vertical"
+            android:text="Live Data"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#8BC34A"
+            android:textSize="24sp"
+            android:typeface="sans" />
+
+    </ScrollView>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginBottom="100dp"
         android:autoSizeMaxTextSize="300dp"
-        android:hint="Shows the live value change of liveText variabl"
-        android:inputType="text"
-        android:maxWidth="250dp"
-        android:maxLines="1"
-        android:minWidth="100dp"
-        android:selectAllOnFocus="false"
-        android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/btnChange"
+        android:hint="Write here..."
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/scrolltext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnChange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change the value of live data instance"
-
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
