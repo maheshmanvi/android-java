@@ -1,0 +1,6 @@
+- `[x]` Add missing `ItemUserBinding` import
+- `[x]` Refactor `UserViewHolder` to be public and add static `from` method
+- `[x]` Update `onCreateViewHolder` to use `UserViewHolder.from`
+- `[x]` Remove redundant `setUsers` method
+- `[x]` Update `ListActivity` to use `submitList` instead of `setUsers`
+- `[x]` Verify build status
